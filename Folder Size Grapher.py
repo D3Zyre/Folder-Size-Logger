@@ -6,12 +6,12 @@ import csv
 import datetime
 
 folder = input("\n\ninsert path here (or E for everything):\n\n")
-folder = folder.replace("\\","/")
+folder = folder.replace("\\","/") # fixing any issues related to different slashes
 print("Path:", folder)
 print("Processing Data...")
-y1 = list()
-x = list()
-with open("Files/Folder Size Log.csv", "r") as file:
+y1 = list() # the y coordinates to graph, in GB
+x = list() # the x coordinates to graph, as dates
+with open("Files/Folder_Size_Log.csv", "r") as file: # the file here is the file that is created by Folder_Size_Logger.py by default
     read = csv.reader(file)
     for i in read:
         if folder != "E":
@@ -40,5 +40,5 @@ plt.ylabel("Folder Size (GB)")
 print("Done")
 plt.show()
 
-# add legend
-# add stats
+# TODO add legend
+# TODO add stats
