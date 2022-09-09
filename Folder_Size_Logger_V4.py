@@ -260,7 +260,7 @@ def main():
     #sorted_by_second = sorted(folder_list, key=lambda tup: tup[1], reverse= True) # sort by size
     print(str(f_sizes[0]), "folders excluded...\n" + str(f_sizes[1]), "folders included...\n" + str(number_files), "files total...\n" + str(int(total)/1000000000), "GB used total...\n")
 
-    with open("Files/Folder_Size_Log.csv", "a") as file:
+    with open("Folder_Size_Log.csv", "a") as file:
         for row in range(len(folder_list)):
             if first_row and first_time:
                 items.append(columns)

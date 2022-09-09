@@ -11,7 +11,7 @@ print("Path:", folder)
 print("Processing Data...")
 y1 = list() # the y coordinates to graph, in GB
 x = list() # the x coordinates to graph, as dates
-with open("Files/Folder_Size_Log.csv", "r") as file: # the file here is the file that is created by Folder_Size_Logger.py by default
+with open("Folder_Size_Log.csv", "r") as file: # the file here is the file that is created by Folder_Size_Logger.py by default
     read = csv.reader(file)
     for i in read:
         if folder != "E":
