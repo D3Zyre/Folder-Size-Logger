@@ -1,2 +1,0 @@
-3600
-time in seconds, only the first line of this file is read, default is 3600 seconds / 1 hour
