@@ -59,6 +59,8 @@ def get_file_folder_sizes_V4(path_to_use):
             cdsize = sum([int(os.stat(str(path)+"/"+str(file))[6]) for file in files]) # sum the sizes of the files
         except FileNotFoundError:
             pass
+        except OSError:
+            pass
         folder_sizes_dict[path] = dict() # we need tell our code that what is in here will be a dictionary before we can start referring to it like one
         folder_sizes_dict[path]["size"] = cdsize
         folder_sizes_dict[path]["children"] = dirs
