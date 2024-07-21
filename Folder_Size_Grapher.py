@@ -19,7 +19,7 @@ with open("Folder_Size_Log.csv", "r") as file: # the file here is the file that 
                 y1.append(str(int(i[2])/1000000000))
                 x.append(datetime.datetime.strptime(i[0], "%Y-%m-%d %H:%M:%S.%f"))
         else:
-            if i[1].replace("\\","/") == "C:/":
+            if i[1].replace("\\","/")[1:] == ":/":
                 y1.append(str(int(i[3])/1000000000))
                 x.append(datetime.datetime.strptime(i[0], "%Y-%m-%d %H:%M:%S.%f"))
 
@@ -40,5 +40,4 @@ plt.ylabel("Folder Size (GB)")
 print("Done")
 plt.show()
 
-# TODO add legend
 # TODO add stats
